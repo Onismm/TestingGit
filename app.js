@@ -59,3 +59,61 @@ b -= 2;
 // Works for all operators + - * /
 
 // Declare String Variables
+
+var firstName = "Ali";
+var lastName = "Darwish";
+
+var myStr = 'I am a "double quoted" string inside "double quotes"';
+
+console.log(myStr);
+
+var firstNameLength = firstName.length;
+console.log(firstNameLength);
+
+var lastLetterOfFirstName = firstName[firstName.length - 1];
+console.log(lastLetterOfFirstName);
+
+// Functions and args
+
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result = "";
+  result +=
+    "The " +
+    myAdjective +
+    " " +
+    myNoun +
+    " " +
+    myVerb +
+    " to the store " +
+    myAdverb;
+
+  return result;
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("human", "small", "walked", "slowly"));
+
+// Arrays
+
+var ourArray = ["John", 23];
+
+var multiDimensionalArray = [
+  ["Ali", 18],
+  ["Karim", 14],
+];
+
+console.log(multiDimensionalArray[1]);
+
+var sampleArray = [42, 53, 15];
+
+sampleArray[0] = 2;
+
+console.log(sampleArray[0]);
+
+sampleArray.push(14, 51);
+
+console.log(sampleArray);
+
+sampleArray.pop(); //Removes the last element in the array
+
+console.log(sampleArray);
