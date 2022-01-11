@@ -117,3 +117,33 @@ console.log(sampleArray);
 sampleArray.pop(); //Removes the last element in the array
 
 console.log(sampleArray);
+
+sampleArray.shift(); // Removes the first element of an array
+
+console.log(sampleArray);
+
+sampleArray.unshift("String"); //Adds an element to the array
+
+console.log(sampleArray);
+
+var myList = [
+  ["Cereal", 3],
+  ["Milk", 2],
+  ["Bananas", 3],
+  ["Juice", 2],
+  ["Eggs", 12],
+];
+
+function ReusableFunction() {
+  console.log("Hello, World");
+}
+
+ReusableFunction();
+
+function addNumbers(numberOne, numberTwo) {
+  sum = numberOne + numberTwo;
+
+  return sum;
+}
+
+console.log(addNumbers(11, 41));
