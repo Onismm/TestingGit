@@ -1,5 +1,5 @@
 console.log("Hello World");
-alert("Hello World");
+// alert("Hello World");
 
 var number = 5; //This is an inline comment!
 
@@ -149,9 +149,9 @@ function addNumbers(numberOne, numberTwo) {
 console.log(addNumbers(11, 41));
 
 function similarity(list1, list2) {
-  list3 = [];
-  list1Length = list1.length;
-  list2Length = list2.length;
+  let list3 = [];
+  let list1Length = list1.length;
+  let list2Length = list2.length;
 
   for (var i = 0; i < list1Length; i++) {
     index = list1[i];
@@ -166,3 +166,21 @@ function similarity(list1, list2) {
 }
 
 console.log(similarity([1, 2, 3, "Hello"], ["Hello", 2, 3, 4]));
+
+function largestWord(list) {
+  let max = 0;
+  let sampleLen = 0;
+  let listLength = list.length;
+  let word = "";
+
+  for (var i = 0; i < listLength; i++) {
+    sampleLen = list[i].length;
+    if (max < sampleLen) {
+      max = sampleLen;
+      word = list[i];
+    }
+  }
+  return word;
+}
+
+console.log(largestWord(["Hello", "I", "Valentine", "Like", "Apples"]));
