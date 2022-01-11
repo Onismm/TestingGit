@@ -134,6 +134,8 @@ var myList = [
   ["Eggs", 12],
 ];
 
+// Simple Functions
+
 function ReusableFunction() {
   console.log("Hello, World");
 }
@@ -184,3 +186,79 @@ function largestWord(list) {
 }
 
 console.log(largestWord(["Hello", "I", "Valentine", "Like", "Apples"]));
+
+function smallestWord(list) {
+  let min = 99999;
+  let sampleLen = 0;
+  let listLength = list.length;
+  let word = "";
+
+  for (var i = 0; i < listLength; i++) {
+    sampleLen = list[i].length;
+    if (min > sampleLen) {
+      min = sampleLen;
+      word = list[i];
+    }
+  }
+  return word;
+}
+
+console.log(smallestWord(["Hello", "I", "Valentine", "Ok", "Hey"]));
+
+var Global = 10;
+
+function fun1() {
+  oopsGlobal = 5;
+}
+
+function fun2() {
+  var output = "";
+  if (typeof Global != "undefined") {
+    output += "Globa: " + Global;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+fun1();
+fun2();
+
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  var outerWear = "sweater";
+
+  return outerWear;
+}
+
+console.log(myOutfit());
+console.log(outerWear);
+
+function nextInLine(arr, item) {
+  arr.push(item);
+  arr.shift();
+}
+
+var sampleArr = [1, 2, 3, 4, 5];
+
+console.log("Before: " + JSON.stringify(sampleArr));
+console.log(nextInLine(sampleArr, 6));
+console.log("After: " + JSON.stringify(sampleArr));
+
+//  && (and) || (or)
+
+var codes = [
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!",
+];
+
+function golfScore(par, strokes) {}
+
+golfScore(5, 4);
