@@ -147,3 +147,22 @@ function addNumbers(numberOne, numberTwo) {
 }
 
 console.log(addNumbers(11, 41));
+
+function similarity(list1, list2) {
+  list3 = [];
+  list1Length = list1.length;
+  list2Length = list2.length;
+
+  for (var i = 0; i < list1Length; i++) {
+    index = list1[i];
+    for (var x = 0; x < list2Length; x++) {
+      index2 = list2[x];
+      if (index == index2) {
+        list3.push(index);
+      }
+    }
+  }
+  return list3;
+}
+
+console.log(similarity([1, 2, 3, "Hello"], ["Hello", 2, 3, 4]));
