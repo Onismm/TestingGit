@@ -259,6 +259,136 @@ var codes = [
   "Go Home!",
 ];
 
-function golfScore(par, strokes) {}
+function golfScore(par, strokes) {
+  if (strokes == 1) {
+    return codes[0];
+  } else if (strokes <= par - 2) {
+    return codes[1];
+  } else if (strokes == par - 1) {
+    return codes[2];
+  } else if (strokes == par) {
+    return codes[3];
+  } else if (strokes == par + 1) {
+    return codes[4];
+  } else if (strokes == par + 2) {
+    return codes[5];
+  } else if (strokes >= par + 3) {
+    return codes[6];
+  }
+}
 
-golfScore(5, 4);
+console.log(golfScore(5, 4));
+
+function caseInSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+  }
+  return answer;
+}
+
+console.log(caseInSwitch(3));
+
+function caseInDefault(val) {
+  var answer = "";
+  switch (val) {
+    case "a":
+      answer = "alpha";
+      break;
+    case "b":
+      answer = "beta";
+      break;
+    case "c":
+      answer = "gamma";
+      break;
+    default:
+      answer = "Sigma";
+      break;
+  }
+  return answer;
+}
+
+console.log(caseInDefault("h"));
+
+function multipleCases(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Hello";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "world";
+      break;
+  }
+  return answer;
+}
+
+console.log(multipleCases(2));
+
+function isLess(a, b) {
+  return a < b;
+}
+console.log(isLess(10, 5));
+
+// Objects
+
+var ourDog = {
+  name: "Camper",
+  legs: 4,
+  tails: 1,
+  friends: ["Everything!"],
+};
+
+var MyDog = {
+  name: "Clifford",
+  legs: 16,
+  tails: 0.3,
+  friends: ["Emo"],
+};
+
+var testObj = {
+  hat: "ballcap",
+  shirt: "jersey",
+  shoes: "cleats",
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+console.log(hatValue, shirtValue);
+
+var sampleObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water",
+};
+
+var entreeValue = sampleObj["an entree"];
+var drinkValue = sampleObj["the drink"];
+
+console.log(entreeValue, drinkValue);
+
+var sampObj = {
+  12: "Hello",
+  16: "Montana",
+};
+
+var playerNumber = 16;
+var player = sampObj[playerNumber];
+
+console.log(player);
